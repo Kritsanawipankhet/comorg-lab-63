@@ -1,5 +1,5 @@
     .data
-    
+
 numbers: .byte 1, 2, 3, 4, 5
     .text
     .global main

@@ -7,7 +7,7 @@ fifteen: .word 15 @ fifteen = 15
 thirty: .word 30 @ thirty = 30
     .text
     .global main
-    
+
 main:
     LDR R1, addr_fifteen @ R1 <- address_fifteen
     LDR R1, [R1] @ R1 <- Mem[address_fifteen]

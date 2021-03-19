@@ -2,14 +2,14 @@
     @ Define all the strings and variables
     .balign 4
 
-get_num_1: .asciz ”Number 1 :\n”
+get_num_1: .asciz "Number 1 :\n"
     .balign 4
-    
-get_num_2: .asciz ”Number 2 :\n”
+
+get_num_2: .asciz "Number 2 :\n"
     @ printf and scanf use %d in decimal numbers
     .balign 4
 
-pattern: .asciz ”%d”
+pattern: .asciz "%d"
     @ Declare and initialize variables: num_1 and num_2
     .balign 4
 
@@ -20,7 +20,7 @@ num_2: .word 0
     @ Output message pattern
     .balign 4
 
-output: .asciz ”Resulf of %d + %d = %d\n”
+output: .asciz "Resulf of %d + %d = %d\n"
     @ Variables to backup link register
     .balign 4
 
@@ -92,6 +92,7 @@ addr_num_1: .word num_1
 addr_num_2: .word num_2
 addr_output: .word output
 addr_lr_bu: .word lr_bu
-    @ Declare printf and scanf functions to be linked with
-    .global printf
-    .global scanf
+
+@ Declare printf and scanf functions to be linked with
+.global printf
+.global scanf

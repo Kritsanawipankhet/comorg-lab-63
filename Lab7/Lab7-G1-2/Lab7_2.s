@@ -3,11 +3,11 @@
 
 fifteen: .word 0 @ fifteen = 0
     .balign 4 @ Request 4 bytes of space
-    
+
 thirty: .word 0 @ thirty = 0
     .text
     .global main
-    
+
 main:
     LDR R1, addr_fifteen @ R1 <- address_fifteen
     MOV R3, #15 @ R3 <- 15
