@@ -1,13 +1,13 @@
     .data
     .balign 4
 
-question: .asciz ”What is your favorite number?”
+question: .asciz "What is your favorite number?"
     .balign 4
 
-message: .asciz ”%d is a great number \n”
+message: .asciz "%d is a great number \n"
     .balign 4
 
-pattern: .asciz ”%d”
+pattern: .asciz "%d"
     .balign 4
 
 number: .word 0
@@ -35,9 +35,9 @@ main:
     LDR R1, addr_number
     LDR R1, [R1]
     BL printf
-    @ Load the value of lr_bu to LR
+    @ Load the value of lr_bu to
     LDR lr, addr_lr_bu
-    LDR lr, [lr] @ LR <- Mem[addr_lr_bu]
+    LDR lr, [lr] @  <- LR Mem[addr_lr_bu]
     BX lr @ Return to main function
 
 @ Define addresses of variables
@@ -46,6 +46,7 @@ addr_message: .word message
 addr_pattern: .word pattern
 addr_number: .word number
 addr_lr_bu: .word lr_bu
-    @ Declare printf and scanf functions to be linked with
-    .global printf
-    .global scanf
+
+@ Declare printf and scanf functions to be linked with
+.global printf
+.global scanf

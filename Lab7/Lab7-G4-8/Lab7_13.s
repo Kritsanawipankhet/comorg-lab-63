@@ -1,10 +1,10 @@
     .data
     .balign 4
 
-get_num_1: .asciz "Enter Number 1 : \n"
+get_num_1: .asciz "Enter Number 1 : "
     .balign 4
 
-get_num_2: .asciz "Enter Number 2 : \n"
+get_num_2: .asciz "Enter Number 2 : "
     .balign 4
 
 pattern: .asciz "%d"
@@ -75,7 +75,6 @@ main:
     BL printf
     BX lr
 
-x : .word   0
 addr_get_num_1: .word   get_num_1
 addr_get_num_2: .word   get_num_2
 addr_pattern:   .word   pattern
