@@ -33,7 +33,7 @@ loop:
     CMP R0,R1
     BLT end
     SUBS R0,R0,R1
-    BL loop
+    B loop
 
 end:
     BX lr
